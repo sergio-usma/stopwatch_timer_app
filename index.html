@@ -7,28 +7,47 @@
     <title>Stopwatch Timer</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
       <h1>Stopwatch Timer</h1>
     </header>
-
-    <div class="stopwatch">
+    <div class="container">
+      <div class="stopwatch">
         <div class="timer">
-            <span id="minutes">00</span>:
-            <span id="seconds">00</span>:
-            <span id="milliseconds">00</span>
+          <span id="minutes">00</span>: <span id="seconds">00</span>:
+          <span id="milliseconds">00</span>
         </div>
         <div class="controls">
-            <button id="startBtn">Start</button>
-            <button id="stopBtn">Stop</button>
-            <button id="pauseBtn">Pause</button>
-            <button id="resetBtn">Reset</button>
+          <button id="startBtn"><i class="bi bi-play-fill"></i></button>
+          <button id="stopBtn"><i class="bi bi-stop-fill"></i></button>
+          <button id="pauseBtn"><i class="bi bi-pause-fill"></i></button>
+          <button id="resetBtn"><i class="bi bi-arrow-clockwise"></i></button>
         </div>
-        <div class="laps">
-            <h2 class="lap_title">Lap Timer</h2>
-            <ul id="lap_list"></ul>
-        </div>
+      </div>
+      <div class="laps hidden">
+        <ul id="lap_list">
+          <li class="lap">
+            <span class="lap_number">Lap 1</span>
+            <span class="lap_time">00:00:00</span>
+          </li>
+          <li class="lap">
+            <span class="lap_number">Lap 1</span>
+            <span class="lap_time">00:00:00</span>
+          </li>
+          <li class="lap">
+            <span class="lap_number">Lap 1</span>
+            <span class="lap_time">00:00:00</span>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <footer>
