@@ -80,7 +80,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-button {
+.controls button {
   width: 5rem;
   height: 5rem;
   border: none;
@@ -92,20 +92,20 @@ button {
   transition: background 0.3s;
 }
 
-button:hover {
+.controls button:hover {
   background: #fff;
   color: black;
   transition: background 0.3s;
 }
 
-button:active {
+.controls button:active {
   transform: scale(0.9);
 }
 
 .laps {
   width: 90vw;
   max-width: 450px;
-  padding: 3rem;
+  padding: 2rem;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -134,15 +134,45 @@ button:active {
 .laps li {
   width: 46%;
   margin: 0.5rem 2%;
-  padding: 1rem;
-  background: black;
-  color: #fff;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .laps ul li:nth-child(n + 11) {
   display: none;
+}
+
+.lap_btn {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background: black;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.lap_btn:hover {
+  background: #1a1919;
+}
+
+.lap_btn:active {
+  background: #383333;
+}
+
+.clipboardBtn {
+  position: absolute;
+  top: 1.3rem;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 footer {
