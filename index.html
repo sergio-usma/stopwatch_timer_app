@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stopwatch Timer</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Stopwatch Timer</h1>
+    </header>
+
+    <div class="stopwatch">
+        <div class="timer">
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>:
+            <span id="milliseconds">00</span>
+        </div>
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        <div class="laps">
+            <h2 class="lap_title">Lap Timer</h2>
+            <ul id="lap_list"></ul>
+        </div>
+    </div>
+
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a href="https://www.linkedin.com/in/sergiousma/">Sergio Usma</a>
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
