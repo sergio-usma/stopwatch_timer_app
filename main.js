@@ -10,6 +10,8 @@ const resetBtn = document.getElementById('resetBtn');
 const recordList = document.getElementById('record_list');
 const lapRecord = document.getElementById('lap_record');
 
+const copyAlert = document.getElementById('alertCopy');
+
 let minutes = 0;
 let seconds = 0;
 let milliseconds = 0;
@@ -45,6 +47,28 @@ function resetTimerData() {
   displayTimer();
 }
 
+// eslint-disable-next-line no-unused-vars
+function toClipboard(element) {
+  navigator.clipboard
+    .writeText(element)
+    .then(() => {
+      copyAlert.textContent = 'Copied!';
+      copyAlert.classList.remove('hidden');
+      copyAlert.classList.add('show-alert');
+    })
+    .catch(() => {
+      copyAlert.textContent = 'Bad request!';
+      copyAlert.classList.remove('hidden');
+      copyAlert.classList.add('error-alert');
+    })
+    .finally(() => {
+      setTimeout(() => {
+        copyAlert.classList.remove('show-alert');
+        copyAlert.classList.add('hidden');
+      }, 2000);
+    });
+}
+
 function addToRecordList() {
   const lapTime = `${padTime(minutes)}:${padTime(seconds)}:${padTime(milliseconds)}`;
 
@@ -52,7 +76,7 @@ function addToRecordList() {
 
   const listItem = document.createElement('li');
 
-  listItem.innerHTML = `<button type="button" class="lap_btn">
+  listItem.innerHTML = `<button type="button" class="lap_btn" onclick="toClipboard('Lap ${lapRecord.childElementCount + 1}: ${lapTime}')">
               <span class="lap_number">Lap ${lapRecord.childElementCount + 1}</span>
               <span class="lap_time">${lapTime}</span>
             </button>`;
