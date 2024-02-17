@@ -155,6 +155,15 @@ h1 {
   cursor: pointer;
 }
 
+.lap_btn:hover::after {
+  content: "🔗";
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+
 .lap_btn:hover {
   background: #1a1919;
 }
@@ -173,6 +182,46 @@ h1 {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
+}
+
+.clipboardBtn:hover {
+  background: #1a1919;
+  transition: background 0.3s;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-alert {
+  position: absolute;
+  bottom: 20%;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c0e7c0;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.error-alert {
+  position: absolute;
+  bottom: 20%;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c7acac;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: red;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 footer {
