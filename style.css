@@ -17,7 +17,7 @@ body {
   align-items: center;
   min-height: 100vh;
   font-size: 1.6rem;
-  background: url("./assets/bg.png") no-repeat center 6rem / cover;
+  background: url("./assets/bg.png") no-repeat center 70% / cover;
 }
 
 body::before {
@@ -248,8 +248,25 @@ footer a:active {
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   body {
-    background: url("./assets/bg.png") no-repeat center 70% / cover;
+    background: url("./assets/bg.png") no-repeat center 6rem / cover;
+  }
+
+  .timer {
+    font-size: 7rem;
+  }
+
+  .laps {
+    padding: 1.5rem 1rem;
+  }
+
+  .laps ul {
+    width: 100%;
+    padding: 0;
+  }
+
+  .lap_btn {
+    font-size: 1.6rem;
   }
 }
