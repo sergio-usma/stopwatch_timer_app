@@ -17,7 +17,7 @@ body {
   align-items: center;
   min-height: 100vh;
   font-size: 1.6rem;
-  background: url("./assets/bg.png") no-repeat center 6rem / cover;
+  background: url("./assets/bg.png") no-repeat center 70% / cover;
 }
 
 body::before {
@@ -80,7 +80,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-button {
+.controls button {
   width: 5rem;
   height: 5rem;
   border: none;
@@ -92,20 +92,20 @@ button {
   transition: background 0.3s;
 }
 
-button:hover {
+.controls button:hover {
   background: #fff;
   color: black;
   transition: background 0.3s;
 }
 
-button:active {
+.controls button:active {
   transform: scale(0.9);
 }
 
 .laps {
   width: 90vw;
   max-width: 450px;
-  padding: 3rem;
+  padding: 2rem;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -134,15 +134,94 @@ button:active {
 .laps li {
   width: 46%;
   margin: 0.5rem 2%;
-  padding: 1rem;
-  background: black;
-  color: #fff;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .laps ul li:nth-child(n + 11) {
   display: none;
+}
+
+.lap_btn {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background: black;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.lap_btn:hover::after {
+  content: "🔗";
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+
+.lap_btn:hover {
+  background: #1a1919;
+}
+
+.lap_btn:active {
+  background: #383333;
+}
+
+.clipboardBtn {
+  position: absolute;
+  top: 1.3rem;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clipboardBtn:hover {
+  background: #1a1919;
+  transition: background 0.3s;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-alert {
+  position: absolute;
+  bottom: 20%;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c0e7c0;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.error-alert {
+  position: absolute;
+  bottom: 20%;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c7acac;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: red;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 footer {
@@ -169,8 +248,25 @@ footer a:active {
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   body {
-    background: url("./assets/bg.png") no-repeat center 70% / cover;
+    background: url("./assets/bg.png") no-repeat center 6rem / cover;
+  }
+
+  .timer {
+    font-size: 7rem;
+  }
+
+  .laps {
+    padding: 1.5rem 1rem;
+  }
+
+  .laps ul {
+    width: 100%;
+    padding: 0;
+  }
+
+  .lap_btn {
+    font-size: 1.6rem;
   }
 }
