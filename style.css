@@ -195,7 +195,7 @@ h1 {
 
 .show-alert {
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   margin-top: 2rem;
   padding: 1rem 3rem;
   display: flex;
@@ -210,7 +210,7 @@ h1 {
 
 .error-alert {
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   margin-top: 2rem;
   padding: 1rem 3rem;
   display: flex;
